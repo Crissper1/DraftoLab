@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ranking</title>
+
+  <!-- Bootstrap y Fuente -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/results.css">
+</head>
+
+<body class="background-gradient">
+  <!-- Container principal -->
+  <div class="container my-4">
+
+    <!-- Botón para volver al inicio -->
+    <div class="mb-3">
+      <a href="index.html" id="btnHome" class="btnHome">INICIO</a>
+    </div>
+
+    <!-- Ranking de jugadores -->
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <div class="card text-center rankingTable">
+          <div class="card-header">
+            <h2 class="mb-0">RANKING</h2>
+          </div>
+          <div class="card-body p-0">
+            <table class="table table-bordered mb-0">
+              <tbody>
+                <!-- Cada fila representa un jugador-->
+                <tr class="player-row" data-name="MARCOS" data-wins="2" data-losses="2" data-last="11/06/25"><td>#1</td><td>MARCOS</td><td>2200</td></tr>
+                <tr class="player-row" data-name="JUAN" data-wins="3" data-losses="1" data-last="09/06/25"><td>#2</td><td>JUAN</td><td>2000</td></tr>
+                <tr class="player-row" data-name="ROBERTO" data-wins="4" data-losses="0" data-last="10/06/25"><td>#3</td><td>ROBERTO</td><td>1650</td></tr>
+                <tr class="player-row" data-name="SOFIA" data-wins="1" data-losses="3" data-last="08/06/25"><td>#4</td><td>SOFIA</td><td>1200</td></tr>
+                <tr class="player-row" data-name="RICARDO" data-wins="2" data-losses="2" data-last="07/06/25"><td>#5</td><td>RICARDO</td><td>900</td></tr>
+                <tr class="player-row" data-name="WILLIAM" data-wins="1" data-losses="3" data-last="05/06/25"><td>#6</td><td>WILLIAM</td><td>750</td></tr>
+                <tr class="player-row" data-name="DIOS" data-wins="0" data-losses="4" data-last="01/06/25"><td>#7</td><td>DIOS</td><td>450</td></tr>
+                <tr class="player-row" data-name="JESUS" data-wins="2" data-losses="2" data-last="06/06/25"><td>#8</td><td>JESUS</td><td>250</td></tr>
+                <tr class="player-row" data-name="BUDA" data-wins="1" data-losses="3" data-last="03/06/25"><td>#9</td><td>BUDA</td><td>130</td></tr>
+                <tr class="player-row" data-name="HUGO" data-wins="0" data-losses="4" data-last="02/06/25"><td>#10</td><td>HUGO</td><td>0</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal con detalles del jugador -->
+  <div class="modal" id="playerModal" tabindex="-1" aria-labelledby="playerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content modalCard">
+        <div class="modal-header">
+          <h5 class="modal-title" id="playerModalLabel">Jugador</h5>
+          <button type="button" class="btn-close-modal">X</button>
+        </div>
+        <div class="modal-body">
+          <div class="border p-2 mb-2">
+            <strong id="playerName">Nombre</strong>
+          </div>
+          <div class="border p-2 mb-2">
+            <p id="wins">Partidas Ganadas:</p>
+            <p id="losses">Partidas Perdidas:</p>
+            <p id="total">Partidas Totales:</p>
+          </div>
+          <p class="mb-0" id="lastGame">Última partida:</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts/details.js"></script>
+  <script src="scripts/buttonHome.js"></script>
+  <script src="scripts/modalCloseEffect.js"></script>
+</body>
+</html>

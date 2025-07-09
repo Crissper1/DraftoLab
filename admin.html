@@ -1,0 +1,190 @@
+<!-- ADMIN PASSWORD:admin -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin</title>  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/admin.css" />
+</head>
+
+<body class="background-gradient">
+
+  <!-- Modal obligatorio para ingreso de contraseña de administrador -->
+  <div class="modal show" tabindex="-1" id="passwordModal" data-bs-backdrop="static" data-bs-keyboard="false" aria-modal="true" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modalCard text-center">
+        <div class="modal-header">
+          <h5 class="modal-title w-100">Acceso Administrador</h5>
+        </div>
+        <div class="modal-body">
+          <p>Introduce la contraseña para acceder</p>
+          <input type="password" id="adminPassword" class="form-control mb-3" placeholder="Contraseña" />
+          <button id="btnCheckPassword" class="btn-main">Entrar</button>
+          <p id="passwordError" style="color: #f00; margin-top: 1rem; display:none;">Contraseña incorrecta</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenido principal oculto hasta validar contraseña -->
+  <div class="container my-4" id="mainContent" style="display:none;">
+
+    <!-- Botón para volver a la página de inicio -->
+    <div class="mb-3">
+      <a href="index.html" id="btnHome" class="btnHome">INICIO</a>
+    </div>
+
+    <!-- Ranking de jugadores -->
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <div class="card text-center rankingTable">
+          <div class="card-header">
+            <h2 class="mb-0">ADMIN</h2>
+          </div>
+          <div class="card-body p-0">
+            <table class="table table-bordered mb-0 align-middle">
+              <tbody id="playersTableBody">
+                <!-- Filas con jugadores-->             
+                <tr class="player-row" data-name="MARCOS" data-wins="2" data-losses="2" data-last="11/06/25" data-password="admin123">
+                  <td>#1</td>
+                  <td class="player-name">MARCOS</td>
+                  <td class="player-score">2200</td>
+                  <td>
+                    <button class="btn btn-sm btn-danger btn-delete" title="Borrar jugador"><img src="assets/images/trash.png" alt=""></button>
+                    <button class="btn btn-sm btn-primary btn-edit" title="Editar jugador"><img src="assets/images/edit_pencil.png" alt=""></button>
+                  </td>
+                </tr>
+                <tr class="player-row" data-name="JUAN" data-wins="3" data-losses="1" data-last="09/06/25" data-password="admin123">
+                  <td>#2</td>
+                  <td class="player-name">JUAN</td>
+                  <td class="player-score">2000</td>
+                  <td>
+                    <button class="btn btn-sm btn-danger btn-delete" title="Borrar jugador"><img src="assets/images/trash.png" alt=""></button>
+                    <button class="btn btn-sm btn-primary btn-edit" title="Editar jugador"><img src="assets/images/edit_pencil.png" alt=""></button>
+                  </td>
+                </tr>
+                <tr class="player-row" data-name="ROBERTO" data-wins="4" data-losses="0" data-last="10/06/25" data-password="admin123">
+                  <td>#3</td>
+                  <td class="player-name">ROBERTO</td>
+                  <td class="player-score">1650</td>
+                  <td>
+                    <button class="btn btn-sm btn-danger btn-delete" title="Borrar jugador"><img src="assets/images/trash.png" alt=""></button>
+                    <button class="btn btn-sm btn-primary btn-edit" title="Editar jugador"><img src="assets/images/edit_pencil.png" alt=""></button>
+                  </td>
+                </tr>
+                <tr class="player-row" data-name="SOFIA" data-wins="1" data-losses="3" data-last="08/06/25" data-password="admin123">
+                  <td>#4</td>
+                  <td class="player-name">SOFIA</td>
+                  <td class="player-score">1200</td>
+                  <td>
+                    <button class="btn btn-sm btn-danger btn-delete" title="Borrar jugador"><img src="assets/images/trash.png" alt=""></button>
+                    <button class="btn btn-sm btn-primary btn-edit" title="Editar jugador"><img src="assets/images/edit_pencil.png" alt=""></button>
+                  </td>
+                </tr>
+                <tr class="player-row" data-name="RICARDO" data-wins="2" data-losses="2" data-last="07/06/25" data-password="admin123">
+                  <td>#5</td>
+                  <td class="player-name">RICARDO</td>
+                  <td class="player-score">900</td>
+                  <td>
+                    <button class="btn btn-sm btn-danger btn-delete" title="Borrar jugador"><img src="assets/images/trash.png" alt=""></button>
+                    <button class="btn btn-sm btn-primary btn-edit" title="Editar jugador"><img src="assets/images/edit_pencil.png" alt=""></button>
+                  </td>
+                </tr>
+                <tr class="player-row" data-name="WILLIAM" data-wins="1" data-losses="3" data-last="05/06/25" data-password="admin123">
+                  <td>#6</td>
+                  <td class="player-name">WILLIAM</td>
+                  <td class="player-score">750</td>
+                  <td>
+                    <button class="btn btn-sm btn-danger btn-delete" title="Borrar jugador"><img src="assets/images/trash.png" alt=""></button>
+                    <button class="btn btn-sm btn-primary btn-edit" title="Editar jugador"><img src="assets/images/edit_pencil.png" alt=""></button>
+                  </td>
+                </tr>
+                <tr class="player-row" data-name="DIOS" data-wins="0" data-losses="4" data-last="01/06/25" data-password="admin123">
+                  <td>#7</td>
+                  <td class="player-name">DIOS</td>
+                  <td class="player-score">450</td>
+                  <td>
+                    <button class="btn btn-sm btn-danger btn-delete" title="Borrar jugador"><img src="assets/images/trash.png" alt=""></button>
+                    <button class="btn btn-sm btn-primary btn-edit" title="Editar jugador"><img src="assets/images/edit_pencil.png" alt=""></button>
+                  </td>
+                </tr>
+                <tr class="player-row" data-name="JESUS" data-wins="2" data-losses="2" data-last="06/06/25" data-password="admin123">
+                  <td>#8</td>
+                  <td class="player-name">JESUS</td>
+                  <td class="player-score">250</td>
+                  <td>
+                    <button class="btn btn-sm btn-danger btn-delete" title="Borrar jugador"><img src="assets/images/trash.png" alt=""></button>
+                    <button class="btn btn-sm btn-primary btn-edit" title="Editar jugador"><img src="assets/images/edit_pencil.png" alt=""></button>
+                  </td>
+                </tr>
+                <tr class="player-row" data-name="BUDA" data-wins="1" data-losses="3" data-last="03/06/25" data-password="admin123">
+                  <td>#9</td>
+                  <td class="player-name">BUDA</td>
+                  <td class="player-score">130</td>
+                  <td>
+                    <button class="btn btn-sm btn-danger btn-delete" title="Borrar jugador"><img src="assets/images/trash.png" alt=""></button>
+                    <button class="btn btn-sm btn-primary btn-edit" title="Editar jugador"><img src="assets/images/edit_pencil.png" alt=""></button>
+                  </td>
+                </tr>
+                <tr class="player-row" data-name="HUGO" data-wins="0" data-losses="4" data-last="02/06/25" data-password="admin123">
+                  <td>#10</td>
+                  <td class="player-name">HUGO</td>
+                  <td class="player-score">0</td>
+                  <td>
+                    <button class="btn btn-sm btn-danger btn-delete" title="Borrar jugador"><img src="assets/images/trash.png" alt=""></button>
+                    <button class="btn btn-sm btn-primary btn-edit" title="Editar jugador"><img src="assets/images/edit_pencil.png" alt=""></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para editar datos del jugador -->
+  <div class="modal" tabindex="-1" id="editPlayerModal" aria-labelledby="editPlayerLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modalCard">
+        <div class="modal-header">
+          <h5 class="modal-title w-100" id="editPlayerLabel">Editar Jugador</h5>
+          <button type="button" class="btn-close-modal" aria-label="Cerrar">X</button>
+        </div>
+        <div class="modal-body">
+          <form id="editPlayerForm">
+            <div class="mb-3">
+              <label for="editPlayerName" class="form-label">Nombre</label>
+              <input type="text" id="editPlayerName" class="form-control" required />
+            </div>
+            <div class="mb-3">
+              <label for="editPlayerPassword" class="form-label">Contraseña</label>
+              <input type="password" id="editPlayerPassword" class="form-control" required />
+            </div>
+            <div class="mb-3">
+              <label for="editPlayerScore" class="form-label">Puntuación</label>
+              <input type="number" id="editPlayerScore" class="form-control" min="0" required />
+            </div>
+            <button type="submit" class="btn btn-main">Guardar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts/passwordModal.js"></script>
+  <script src="scripts/playerTable.js"></script>
+  <script src="scripts/buttonHome.js"></script>  
+  <script src="scripts/modalCloseEffect.js"></script>
+  <script src="scripts/adminButtonEffect.js"></script>
+
+</body>
+
+</html>

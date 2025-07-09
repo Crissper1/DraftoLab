@@ -1,0 +1,149 @@
+/* Fondo general en gradiente */
+.background-gradient {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(0deg, #000000, #00012c, #6eb6d8);
+  background-repeat: no-repeat;
+  background-size: cover;  
+}
+
+/* Estilo para botón de volver al inicio */
+.btnHome {
+  color: #fff;
+  background-color: #bc3a3a;
+  padding: 5px 15px;
+  font-size: 14px;
+  font-family: "Press Start 2P", system-ui;
+  border: none;
+  box-shadow: 0px 3px black, 0px -3px black, 3px 0px black, -3px 0px black,
+              0px 6px #00000038, 3px 3px #00000038, -3px 3px #00000038,
+              inset 0px 3px #ffffff36;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Estilo para botones edicion y borrar*/
+
+.btn-primary,
+.btn-danger{
+    box-shadow: 0px 3px black, 0px -3px black, 3px 0px black, -3px 0px black,
+              0px 6px #00000038, 3px 3px #00000038, -3px 3px #00000038,
+              inset 0px 3px #ffffff36;
+    border-radius: 0;
+    margin: 10px;
+}
+
+/* Tabla del ranking */
+.rankingTable,
+tr,
+td {
+  color: #fff;
+  background-color: #33335E;  
+  margin: 40px auto;
+  font-size: 14px;
+  font-family: "Press Start 2P", system-ui;
+  border: none;
+  box-shadow: 0px 3px black, 0px -3px black, 3px 0px black, -3px 0px black,
+              0px 6px #00000038, 3px 3px #00000038, -3px 3px #00000038,
+              inset 0px 3px #ffffff36;
+  border-radius: 0 !important;
+  vertical-align: middle;
+  text-align: center;
+}
+
+td {
+  background-color: #8b8bbb !important;
+}
+
+/* Para que los botones estén en fila con separación */
+td > button {
+  margin-left: 5px;
+}
+
+/* Bordes de las cajas dentro del modal */
+.border.p-2.mb-2 {
+  background-color: #8b8bbb33 !important;
+}
+
+/* Modal del jugador */
+.modalCard {
+  color: #fff;
+  background-color: #33335E;
+  padding: 15px 40px;
+  margin: 40px auto;
+  font-size: 14px;
+  font-family: "Press Start 2P", system-ui;
+  border: none;
+  box-shadow: 0px 3px black, 0px -3px black, 3px 0px black, -3px 0px black,
+              0px 6px #00000038, 3px 3px #00000038, -3px 3px #00000038,
+              inset 0px 3px #ffffff36;
+  border-radius: 0 !important;
+}
+
+/* Botón de cerrar modal */
+.btn-close-modal {
+  color: #fff;
+  background-color: #bc3a3a;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-family: "Press Start 2P", system-ui;
+  border: none;
+  box-shadow: 0px 3px black, 0px -3px black, 3px 0px black, -3px 0px black,
+              0px 6px #00000038, 3px 3px #00000038, -3px 3px #00000038,
+              inset 0px 3px #ffffff36;
+  cursor: pointer;
+}
+
+/* Botón principal dentro del modal */
+.btn-main {
+  color: #fff;
+  background-color: #6abc3a;
+  padding: 12px 40px;
+  font-size: 14px;
+  font-family: "Press Start 2P", system-ui;
+  border: 0;
+  box-shadow: 0px 3px black, 0px -3px black, 3px 0px black, -3px 0px black,
+              0px 6px #00000038, 3px 3px #00000038, -3px 3px #00000038,
+              inset 0px 3px #ffffff36;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.btn-main:hover {
+  background-color: #5dab32; /* un tono más oscuro del verde */
+  filter: brightness(90%);
+  color: #fff;
+  opacity: 1;
+  transition: filter 0.2s ease;
+}
+
+/* Reset general */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+img{  
+  width: 30px;
+  text-align: center;  
+  position: relative;
+}
+/* Botón para cerrar modal */
+.btn-close-modal {
+  color: #fff;
+  background-color: #bc3a3a;
+  padding: 5px 10px;
+  margin: 0;
+  font-size: 14px;
+  font-family: "Press Start 2P", system-ui;
+  border: 0;
+  box-shadow: 0px 3px black, 0px -3px black, 3px 0px black, -3px 0px black,
+              0px 6px #00000038, 3px 3px #00000038, -3px 3px #00000038,
+              inset 0px 3px #ffffff36;
+  cursor: pointer;
+  height: fit-content;
+}

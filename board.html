@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Juego</title>
+
+  <link rel="stylesheet" href="assets/css/board.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="background-gradient">
+
+  <div class="container-fluid my-3">
+
+    <!-- Encabezado -->
+    <div class="row mb-3 text-center">      
+      <div class="col-12 col-md"><a href="index.html" id="btnHome" class="btnHome">INICIO</a></div>   
+      <div class="col-12 col-md"><div class="infoBox">TURNO JUGADOR ACTUAL</div></div>
+      <div class="col-12 col-md"><div class="infoBox">RONDA 1/2</div></div>
+      <div class="col-12 col-md"><div class="infoBox">RESTRICCIÓN DADO</div></div>
+      <div class="col-12 col-md"><div class="infoBox">CANTIDAD T-REX JUGADOR</div></div>
+    </div>
+
+    <!-- Tablero -->
+    <div class="boardContainer">
+      <div class="gridBoard">
+        <!-- Esquina superior izquierda -->
+        <div id="topLeft" class="cell cell-row">
+          <div id="threeIncubator" class="smallCell">Incubadora de Tríos</div>
+          <div id="peerIncubator" class="largeCell">Incubadora de Iguales</div>
+        </div>
+
+        <!-- Esquina superior derecha -->
+        <div id="topRight" class="cell">
+          <div id="masterIncubator" class="fullCell">Incubadora Maestra</div>
+        </div>
+
+        <!-- Esquina inferior izquierda -->
+        <div id="bottomLeft" class="cell">
+          <div id="coupleIncubator" class="fullCell">Incubadora de Parejas</div>
+        </div>
+
+        <!-- Esquina inferior derecha -->
+        <div id="bottomRight" class="cell cell-row">
+          <div id="solitaireIncubator" class="smallCell">Incubadora Solitaria</div>
+          <div id="differentIncubator" class="largeCell">Incubadora de Diferente</div>
+        </div>
+
+        <!-- Desechos dentro del grid -->
+        <div class="grid-spacer"></div>
+        <div id="trashBin" class="trashCell">Desechos</div>
+      </div>
+    </div>
+
+    <!-- Tubos de ensayo -->
+    <div class="container mt-3">
+      <div class="tubeContainer">
+        <div class="tubeSlot">
+          <img src="assets/images/t-rex_tube.png" alt="t-rex" class="tubeImage baseTube">
+          <img src="assets/images/tube_holder.png" alt="holder" class="tubeImage tubeOverlay">
+        </div>
+        <div class="tubeSlot"> 
+          <img src="assets/images/ankylosaurus_tube.png" alt="t-rex" class="tubeImage baseTube">
+          <img src="assets/images/tube_holder.png" alt="holder" class="tubeImage tubeOverlay">
+        </div>
+        <div class="tubeSlot"> 
+          <img src="assets/images/brachiosaurus_tube.png" alt="t-rex" class="tubeImage baseTube">
+          <img src="assets/images/tube_holder.png" alt="holder" class="tubeImage tubeOverlay">
+        </div>
+        <div class="tubeSlot"> 
+          <img src="assets/images/parasaurolophus_tube.png" alt="t-rex" class="tubeImage baseTube">
+          <img src="assets/images/tube_holder.png" alt="holder" class="tubeImage tubeOverlay">
+        </div>
+        <div class="tubeSlot"> 
+          <img src="assets/images/stegosaurus_tube.png" alt="t-rex" class="tubeImage baseTube">
+          <img src="assets/images/tube_holder.png" alt="holder" class="tubeImage tubeOverlay">
+        </div>
+        <div class="tubeSlot"> 
+          <img src="assets/images/triceratops_tube.png" alt="t-rex" class="tubeImage baseTube">
+          <img src="assets/images/tube_holder.png" alt="holder" class="tubeImage tubeOverlay">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/buttonHome.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

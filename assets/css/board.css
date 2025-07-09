@@ -1,0 +1,205 @@
+.background-gradient {
+  background: linear-gradient(180deg, #132025, rgb(0, 2, 99), #6eb6d8);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.boardContainer {  
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #33335E;
+  box-shadow: 0px 3px black, 0px -3px black, 3px 0px black, -3px 0px black,
+              0px 6px #00000038, 3px 3px #00000038, -3px 3px #00000038,
+              inset 0px 3px #ffffff36;
+}
+
+.gridBoard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 10px;
+}
+
+/* Celdas del tablero */
+.cell {
+  margin: 10px;
+  background-color: #e0f0e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  min-height: 150px;
+  box-shadow: 0px 3px black, 0px -3px black, 3px 0px black, -3px 0px black,
+              0px 6px #00000038, 3px 3px #00000038, -3px 3px #00000038,
+              inset 0px 3px #ffffff36;
+}
+
+/* Botón inicio */
+.btnHome {  
+  padding: 8px 90px;
+  font-size: 14px;
+  font-family: "Press Start 2P", system-ui;
+  color: #fff;
+  background-color: #bc3a3a;
+  border: none;
+  text-decoration: none;
+  box-shadow: 0px 3px black, 0px -3px black, 3px 0px black, -3px 0px black,
+              0px 6px #00000038, 3px 3px #00000038, -3px 3px #00000038,
+              inset 0px 3px #ffffff36;
+  cursor: pointer;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+}
+
+/* Info boxes */
+.infoBox {
+  padding: 8px;
+  margin: 10px;
+  font-family: "Press Start 2P", system-ui;
+  color: white;
+  background-color: #33335E;
+  box-shadow: 0px 3px black, 0px -3px black, 3px 0px black, -3px 0px black,
+              0px 6px #00000038, 3px 3px #00000038, -3px 3px #00000038,
+              inset 0px 3px #ffffff36;
+  font-size: 0.7rem;
+}
+
+/* Distribución horizontal para incubadoras */
+.cell-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tamaños de incubadoras */
+.smallCell, .largeCell, .fullCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;  
+  height: 100%;
+
+}
+
+.smallCell {
+  flex: 1;
+  font-size: 0.75rem;
+  background-color: #074f9c;  
+}
+
+.largeCell {
+  flex: 2;
+  font-size: 0.85rem;
+  background-color: #f72f2f;
+}
+
+.fullCell {
+  width: 100%;
+  font-size: 0.85rem;
+  background-color: #52af4f;
+}
+
+/* Desechos dentro del grid pero abajo */
+.trashCell {
+  background-color: #f8d7da;
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding: 20px;
+  text-align: center; 
+  box-shadow: 0px 3px black, 0px -3px black, 3px 0px black, -3px 0px black,
+              0px 6px #00000038, 3px 3px #00000038, -3px 3px #00000038,
+              inset 0px 3px #ffffff36;
+  margin: 10px;
+  grid-column: 2 / 3;
+}
+
+/* Espacio vacío */
+.grid-spacer {
+  grid-column: 1 / 2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gridBoard {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+  }
+
+  .cell {
+    font-size: 0.7rem;
+    min-height: 100px;
+  }
+
+  .trashCell {
+    grid-column: 1 / 2;
+  }
+
+  .grid-spacer {
+    display: none;
+  }
+}
+
+/* Contenedor de tubos de ensayo */
+.tubeContainer {
+  display: flex;  
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color: #33335E;
+  box-shadow: 0px 3px black, 0px -3px black, 3px 0px black, -3px 0px black,
+              0px 6px #00000038, 3px 3px #00000038, -3px 3px #00000038,
+              inset 0px 3px #ffffff36;   
+  max-width: 100%;      
+  margin: 0 auto;      
+  padding: 10px;         
+  box-sizing: border-box; 
+  overflow-x: auto;    
+}
+
+/* Slots para tubos */
+.tubeSlot {
+  width: 60px;
+  height: 60px; 
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+
+
+/* Estilo base para ambas imágenes */
+.tubeImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Tubo base */
+.baseTube {
+  z-index: 1;
+}
+
+/* Imagen superpuesta (holder) */
+.tubeOverlay {
+  z-index: 2;
+  pointer-events: none; /* Para que no interfiera con futuros drag/drop */
+}
+/* Para que no haya scroll vertical sin sentido */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+.background-gradient {
+  min-height: 100%;
+}

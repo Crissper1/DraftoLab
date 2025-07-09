@@ -1,0 +1,237 @@
+/* Reset básico para evitar márgenes inesperados y scroll horizontal */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* evita scroll horizontal */
+}
+
+/* Fondo y estilo general del body */
+.index-style {
+  position: relative;
+  background: linear-gradient(0deg, #000000, #00012c, #6eb6d8);
+}
+
+/* Imagen título centrada */
+.title-image {
+  width: 50%;  
+  height: auto;
+  display: block;
+  margin: 0 auto -50px auto;
+}
+
+@media (max-width: 768px) {
+  .title-image {
+    width: 250px; /* o el ancho mínimo que quieras */
+    max-width: 90%; /* que no se pase del 90% en móviles */
+  }
+}
+
+/* Panel principal con fondo de panel */
+.play-panel {
+  background-image: url("../images/panel_background.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 100%;
+  max-width: 600px;
+  padding: 2em 1em;
+  margin-top: 100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Botón para subir scroll, fijo en pantalla */
+button.btn-scroll-up {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: xx-large;
+  text-shadow: 0px 3px black, 0px -3px black, 3px 0px black, -3px 0px black,
+    0px 6px #00000038, 3px 3px #00000038, -3px 3px #00000038;
+  transition: color 0.3s;
+  font-family: "Press Start 2P", system-ui;
+  color: white;
+  
+}
+
+button.btn-scroll-up:hover {
+  color: #0056b3;
+}
+
+/* Botón flotante con bandera (cambiar idioma) */
+.floating-flag {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.floating-flag img {
+  width: 36px;
+  height: auto;
+  box-shadow: 0px 3px black, 0px -3px black, 3px 0px black, -3px 0px black,
+              inset 0px 3px #ffffff36;
+}
+
+/* Reset de estilo para botones que tienen imagen dentro */
+.btn-reset {
+  all: unset;
+  cursor: pointer;
+}
+
+/* Tamaños de imágenes dentro de botones */
+.btn-image-small {
+  width: 100px;
+  height: auto;
+}
+
+.btn-image-medium {
+  width: 150px;
+  height: auto;
+}
+
+.btn-image-large {
+  width: 200px;
+  height: auto;
+}
+
+/* Estilo base para botones con estilo principal */
+.btn-main {
+  color: #fff;
+  background-color: #6abc3a;
+  padding: 15px 40px;
+  margin: 40px;
+  font-size: 14px;
+  font-family: "Press Start 2P", system-ui;
+  border: 0;
+  box-shadow: 0px 3px black, 0px -3px black, 3px 0px black, -3px 0px black,
+    0px 6px #00000038, 3px 3px #00000038, -3px 3px #00000038,
+    inset 0px 3px #ffffff36;
+  cursor: pointer;
+  height: 50px;
+}
+
+/* Estilos para el modal */
+.modal-content {
+  color: #fff;
+  background-color: #33335E;
+  padding: 15px 40px;
+  margin: 40px;
+  font-size: 14px;
+  font-family: "Press Start 2P", system-ui;
+  border: 0;
+  box-shadow:
+    0px 3px black,
+    0px -3px black,
+    3px 0px black,
+    -3px 0px black,
+    0px 6px #00000038,
+    3px 3px #00000038,
+    -3px 3px #00000038,
+    inset 0px 3px #ffffff36;
+  cursor: pointer;
+  height: auto;
+  border-radius: 0;
+}
+
+@media (max-width: 576px) {
+  .modal-content {
+    margin: 10px;
+    padding: 15px 20px; 
+  }
+
+  .btn-main {
+    padding: 10px 20px;
+    margin: 20px;
+    font-size: 12px;
+  }
+
+  .form-control {
+    font-size: 12px;
+  }
+
+  .modal-header h5 {
+    font-size: 1rem;
+  }
+}
+
+/* Botón para cerrar modal */
+.btn-close-modal {
+  color: #fff;
+  background-color: #bc3a3a;
+  padding: 5px 10px;
+  margin: 0;
+  font-size: 14px;
+  font-family: "Press Start 2P", system-ui;
+  border: 0;
+  box-shadow: 0px 3px black, 0px -3px black, 3px 0px black, -3px 0px black,
+    0px 6px #00000038, 3px 3px #00000038, -3px 3px #00000038,
+    inset 0px 3px #ffffff36;
+  cursor: pointer;
+  height: fit-content;
+}
+
+/* Sección principal fullscreen flex */
+.full-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+/* Sección de contenido con scroll */
+.scroll-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 2rem 0;
+}
+
+/* Imágenes en contenido */
+.stock-img {
+  width: 50%;
+  height: auto;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 0.15);
+}
+
+/* Estilos para párrafos y encabezados con fuente especial */
+p,
+h2,
+h3{
+  font-family: "Press Start 2P", system-ui;
+  color: white;
+}
+
+/* Pie */
+.footer {
+  background-color: #000624;
+  color: #ffffff;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 12px;
+  padding: 20px 0;
+  margin-top: 40px;
+  text-shadow: 1px 1px 2px black;
+  box-shadow: 0px -5px black, 0px -10px #00000038, inset 0px 5px #52518336;
+}

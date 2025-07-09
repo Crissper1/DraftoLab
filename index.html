@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DraftoLab</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+    crossorigin="anonymous"
+  />
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <!-- Fuente especial -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body class="index-style">
+  <!-- Sección principal fullscreen -->
+  <section class="full-screen">
+    <!-- Botón para subir scroll -->
+    <button class="btn-scroll-up" id="btnScrollUp">↑</button>
+
+    <!-- Botón flotante para idioma -->
+<button id="btnLanguage" class="floating-flag" title="Cambiar idioma a inglés">
+  <img src="assets/images/uk_flag.png" alt="UK Flag" />
+</button>
+    <!-- Contenedor título con imagen -->
+    <div class="container text-center mt-5">
+      <img
+        src="assets/images/title.png"
+        alt="DraftoLab Title"
+        class="title-image"
+      />
+    </div>
+
+    <!-- Panel principal con botones -->
+<div class="container play-panel">
+  <button
+    id="btnOpenModal"
+    type="button"
+    class="btn-reset"
+    data-bs-toggle="modal"
+    data-bs-target="#playModal"
+  >
+    <img
+      id="imgPlay"
+      src="assets/images/play_button.png"
+      alt="Play"
+      class="btn-image-small"
+    />
+  </button>
+
+  <button id="btnResults" type="button" class="btn-reset">
+    <img
+      id="imgResults"
+      src="assets/images/results_button.png"
+      alt="Results"
+      class="btn-image-large"
+    />
+  </button>
+
+  <button
+    id="btnRegister"
+    type="button"
+    class="btn-reset"
+    data-bs-toggle="modal"
+    data-bs-target="#registerModal"
+  >
+    <img
+      id="imgRegister"
+      src="assets/images/register_button.png"
+      alt="Register"
+      class="btn-image-medium"
+    />
+  </button>
+</div>
+
+    <!-- Modal para seleccionar jugadores -->
+    <div
+      class="modal"
+      id="playModal"
+      tabindex="-1"
+      aria-labelledby="playModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center">
+          <div class="modal-header">
+            <h5 class="modal-title w-100" id="playModalLabel">
+              Seleccionar jugadores
+            </h5>
+            <button type="button" class="btn-close-modal">X</button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="playerCount" class="form-label">Jugadores</label>
+              <select class="form-select w-25 mx-auto" id="playerCount">
+                <option value="2" selected>2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <button class="btn-main" id="btnPlayStart">Jugar</button>
+            <div id="playerNames" class="mt-3">
+              <div class="mb-2">
+                <label>JUGADOR 1</label>
+                <input
+                  type="text"
+                  class="form-control mb-1"
+                  placeholder="Nombre jugador 1"
+                />
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Contraseña jugador 1"
+                />
+              </div>
+              <div class="mb-2">
+                <label>JUGADOR 2</label>
+                <input
+                  type="text"
+                  class="form-control mb-1"
+                  placeholder="Nombre jugador 2"
+                />
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Contraseña jugador 2"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal para registro de usuario -->
+    <div
+      class="modal"
+      id="registerModal"
+      tabindex="-1"
+      aria-labelledby="registerModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center">
+          <div class="modal-header">
+            <h5 class="modal-title w-100" id="registerModalLabel">
+              Registro de Usuario
+            </h5>
+            <button type="button" class="btn-close-modal">X</button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control mb-2"
+                placeholder="Nombre de usuario"
+              />
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Contraseña"
+              />
+            </div>
+            <button class="btn-main">Registro</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de contenido scroll -->
+  <section class="scroll-content" style="color:white">
+    <div class="container py-5">
+      <div class="row align-items-center flex-column flex-md-row">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h2>¿Qué es DraftoLab?</h2>
+          <p>
+            Draftlab es un juego de mesa familiar en el que los jugadores crean su
+            propias genéticas de dinosaurios, gestionando una colección de adn.
+            El juego se centra en un proceso de draft, donde los jugadores
+            seleccionan tubos con adn de un conjunto y los colocan
+            estratégicamente en sus incubadoras para maximizar la evolución
+            genética. Las partidas son rápidas y sencillas, ideales para todas
+            las edades, y ofrecen una experiencia de juego entretenida y con
+            decisiones interesantes.
+          </p>
+        </div>
+        <div class="col-md-6 text-center">
+          <img
+            src="assets/images/stock_image.jpg"
+            alt="DraftoLab"
+            class="img-fluid rounded shadow stock-img"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-5">
+      <div class="row align-items-center flex-column-reverse flex-md-row">
+        <div class="col-md-6 text-center mt-4 mt-md-0">
+          <img
+            src="assets/images/stock_image.jpg"
+            alt="DraftoLab"
+            class="img-fluid rounded shadow stock-img"
+          />
+        </div>
+        <div class="col-md-6">
+          <h3>Explicación más detallada:</h3>
+          <p>
+            <strong>Mecánica de Draft:</strong> Los jugadores toman tubos de adn
+            de una caja y, basándose en el resultado de un dado, los colocan en
+            su incubadora personal.<br /><br />
+            <strong>Incubadora:</strong> El juego se desarrolla en un laboratorio
+            de adn donde los jugadores deben ubicar a los tubos de adn de
+            dinosaurio, con el objetivo de traer y evolucionar especies extintas.<br /><br />
+            <strong>Reglas de Colocación:</strong> El dado determina las incubadoras
+            del laboratorio donde se pueden colocar los tubos de adn de
+            dinosaurio, añadiendo un elemento de estrategia y azar.<br /><br />
+            <strong>Puntuación:</strong> Al final de la partida, se suman los puntos
+            basados en la ubicación de los tubos de adn y la combinación de
+            especies, buscando la mejor combinación para buscar la mejor evolución
+            genética de los dinosaurios.<br /><br />
+            <strong>Familiar y Rápido:</strong> DraftoLab es conocido por ser un
+            juego accesible y fácil de aprender, con partidas que suelen durar
+            entre 15 y 20 minutos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="scripts/buttonResults.js"></script>
+  <script src="scripts/buttonPlay.js"></script>
+  <script src="scripts/modalCloseEffect.js"></script>
+  <script src="scripts/scrollUp.js"></script>
+  <script src="scripts/play.js"></script>
+  <script src="scripts/buttonRegister.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Pie -->
+<footer class="footer">
+  <div class="container text-center">
+    <p>MACRISAN - Todos los derechos reservados</p>
+  </div>
+</footer>
+
+</body>
+
+</html>
