@@ -46,7 +46,7 @@ Un juego de mesa digital basado en Draftosaurus con interfaz retro pixelada.
 
 ## Demo en vivo
 
-[Visita DraftoLab](https://tu-usuario.github.io/DraftoLab)
+[Visita DraftoLab](https://macrisan.github.io/Proyecto)
 
 ---
 
