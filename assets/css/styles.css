@@ -4,15 +4,22 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* evita scroll horizontal */
+  background-color: #001122;
+  background-image: url("../images/Fondo21.png");
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 /* Fondo y estilo general del body */
 .index-style {
   position: relative;
-  background: linear-gradient(0deg, #000000, #00012c, #6eb6d8);
 }
 
-/* Imagen título centrada */
+
+/* Imagen título centrada (mantenida para compatibilidad) */
 .title-image {
   width: 50%;  
   height: auto;
@@ -21,6 +28,16 @@ body {
 }
 
 @media (max-width: 768px) {
+  .title-text {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    letter-spacing: 0.05em;
+  }
+  
+  .title-container {
+    margin-top: 1rem !important;
+  }
+  
   .title-image {
     width: 250px; /* o el ancho mínimo que quieras */
     max-width: 90%; /* que no se pase del 90% en móviles */

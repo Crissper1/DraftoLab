@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (enterButton) {
     enterButton.addEventListener("click", function () {
             
-      enterButton.style.transition = "filter 0.2s ease";
+      enterButton.style.transition = "filter 0.2s ease";  
       enterButton.style.filter = "brightness(70%)";
    
       clickSound.currentTime = 0;
