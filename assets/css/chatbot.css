@@ -166,7 +166,7 @@
     box-shadow: inset 0px 2px #00000060, inset 2px 0px #00000060;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
   .chatbot {
     right: 12px;
     bottom: 12px;
