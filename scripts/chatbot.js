@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // URL de tu webhook de n8n. ¡Asegúrate de cambiarla por la tuya!
     // NOTA: Esta es una URL de PRUEBA. Cuando actives tu workflow en n8n, usa la URL de PRODUCCIÓN.
-    const N8N_WEBHOOK_URL = "https://8n8-n8nupdate.vertwo.easypanel.host/webhook/botDraftoLab   ";
+    const N8N_WEBHOOK_URL = "https://8n8-n8nupdate.vertwo.easypanel.host/webhook/botDraftoLab";
     
     // Proxy CORS para desarrollo local (opcional)
     const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
