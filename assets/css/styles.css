@@ -13,6 +13,16 @@ body {
   min-height: 100vh;
 }
 
+/* Fondo específico para móviles */
+@media (max-width: 600px) {
+  html,
+  body {
+    background-image: url("../images/FondodCel.png");
+    background-size: cover;
+    background-position: center;
+  }
+}
+
 /* Fondo y estilo general del body */
 .index-style {
   position: relative;
